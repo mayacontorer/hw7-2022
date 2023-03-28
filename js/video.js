@@ -20,6 +20,8 @@ play_button.addEventListener("click", function(){
 	video.play();
 	video.autoplay = false;
 	video.loop = false;
+	video.volume = (slider.value/100);
+	volume_control.innerHTML = (video.volume * 100 + "%");
 	console.log("Video play");
 })
 
@@ -69,7 +71,7 @@ mute_button.addEventListener("click", function(){
 slider.addEventListener("change", function(){
 	console.log("Slider is working");
 	video.volume = (slider.value/100);
-	volume_control.innerHTML = (video.volume * 100);
+	volume_control.innerHTML = (video.volume * 100 + "%");
 })
 
 // reference the css styling for the oldSchool class and apply it when the old school button is clicked
