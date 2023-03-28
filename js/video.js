@@ -46,8 +46,11 @@ speed_up.addEventListener("click", function(){
 // add an event listener to the skip button so that when clicked, it will skip ahead 10 seconds in the video
 skip_button.addEventListener("click", function(){
 	video.currentTime += 10;
-	if (video.currentTime > video.duration); {
+	if (video.currentTime > 67.403333) {
+		skip_button.disabled = true;
 		video.currentTime = 0;
+		video.pause();
+		
 	}
 	console.log(video.currentTime);
 })
